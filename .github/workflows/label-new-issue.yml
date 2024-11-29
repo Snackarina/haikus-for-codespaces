@@ -1,0 +1,17 @@
+name: Label New Issues
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  label-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Label the issue if no labels are assigned
+        uses: lowlighter/issue-labeler@v1.0.4
+        with:
+          add-labels: 'NEW ISSUE'
+          require-empty: true
