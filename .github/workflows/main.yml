@@ -8,7 +8,8 @@ jobs:
   automate-issues-labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: andymckay/labeler@1.0.4
+      - name: Simple Issue Labeler
+        uses: andymckay/labeler@1.0.4
         with:
           add-labels: 'NEW ISSUE'
           ignore-if-labeled: true
