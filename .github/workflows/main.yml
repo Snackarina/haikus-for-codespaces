@@ -2,7 +2,8 @@ name: issue-automation
 
 on:
   issues:
-    types: [opened]
+    types: 
+      - opened
 
 jobs:
   automate-issues-labels:
@@ -13,3 +14,4 @@ jobs:
         with:
           add-labels: 'NEW ISSUE'
           ignore-if-labeled: true
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
